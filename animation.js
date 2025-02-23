@@ -1,3 +1,50 @@
+
+//loader
+
+function startLoader() {
+    setTimeout(() => {
+        // Hide "Prasad" after 2 seconds
+        document.getElementById("firstText").style.display = "none";
+
+        // Show full name with typing effect
+        let fullName = "PRASAD";
+        let nameElement = document.getElementById("fullName");
+        nameElement.style.display = "block";
+        nameElement.classList.add("typing");
+
+        let i = 0;
+        function type() {
+            if (i < fullName.length) {
+                nameElement.innerHTML += fullName.charAt(i);
+                i++;
+                setTimeout(type, 100);
+            } else {
+                // After typing is complete, load the website
+                setTimeout(() => {
+                    document.getElementById("loader").style.display = "none";
+                    document.getElementById("content").style.display = "block";
+                }, 1000);
+            }
+        }
+        type();
+    }, 2000);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 document.addEventListener("DOMContentLoaded", function () {
     const typedTextSpan = document.querySelector(".typedText");
     const textArray = ["Backend Developer", "Frontend Developer", "Cloud Engineer"];
