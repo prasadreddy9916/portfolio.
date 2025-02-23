@@ -85,7 +85,7 @@ document.addEventListener("DOMContentLoaded", function () {
             textCardSpan.textContent += textCardArray[0].charAt(cardCharIndex);
             
             cardCharIndex++;
-            setTimeout(typeCard, 500);
+            setTimeout(typeCard, 100);
         }
     }
     
