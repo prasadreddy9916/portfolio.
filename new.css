@@ -46,7 +46,7 @@
     white-space: nowrap;
     border-right: 3px solid white;
     width: 0;
-    animation: typing 3s steps(30, end) forwards;
+    animation: typing 4s steps(30, end) forwards;
 }
 
 /* Responsive Design */
@@ -59,7 +59,7 @@
 
 @media (max-width: 480px) {  /* Mobile Phones */
     .loader-text {
-        font-size: 40px;
+        font-size: 30px;
         letter-spacing: 2px;
     }
 }
