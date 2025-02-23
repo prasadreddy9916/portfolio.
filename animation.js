@@ -83,27 +83,29 @@ document.addEventListener("DOMContentLoaded", function () {
     // Initialize first text color
     typedTextSpan.style.color = colors[textArrayIndex];
     type();
-
+document.addEventListener("DOMContentLoaded", function () {
     const textCardSpan = document.querySelector(".featured-text-card span");
     const textCardArray = ["Valasa Om Prasad Reddy"];
     
     let cardCharIndex = 0;
+    const typingDuration = 10000; // 10 seconds
+    const totalChars = textCardArray[0].length;
+    const typingSpeed = typingDuration / totalChars; // Time per character
     
     function typeCard() {
-        if (cardCharIndex < textCardArray[0].length) {
+        if (cardCharIndex < totalChars) {
             textCardSpan.textContent += textCardArray[0].charAt(cardCharIndex);
-            
             cardCharIndex++;
-            setTimeout(typeCard, 100);
+            setTimeout(typeCard, typingSpeed);
         }
     }
-    
+
     // Start typing animation
     typeCard();
-    
+
     // Change color of featured text card
     function changeColor() {
-        const colors = ["brown", "brown", "brown"];
+        const colors = ["brown", "orange", "red"];
         let colorIndex = 0;
         setInterval(() => {
             textCardSpan.parentElement.style.color = colors[colorIndex];
@@ -111,10 +113,11 @@ document.addEventListener("DOMContentLoaded", function () {
             colorIndex = (colorIndex + 1) % colors.length;
         }, 3000);
     }
-    
+
     // Start color change
     changeColor();
 });
+
 
 //toggle menu
 document.getElementById('navToggle').addEventListener('click', function() {
