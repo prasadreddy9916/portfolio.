@@ -679,7 +679,7 @@ body {
 
 
 .experience-list li {
-    font-size: 20px;
+    font-size: 1.5em;
     margin: 8px 0;
     transition: color 0.3s ease-in-out;
     color: white;
