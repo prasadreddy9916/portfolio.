@@ -17,7 +17,7 @@ function startLoader() {
             if (i < fullName.length) {
                 nameElement.innerHTML += fullName.charAt(i);
                 i++;
-                setTimeout(type, 100);
+                setTimeout(type, 300);
             } else {
                 // After typing is complete, load the website
                 setTimeout(() => {
