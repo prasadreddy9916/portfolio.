@@ -270,6 +270,12 @@ body {
 }
 
 
+@media screen and (max-width:768px) { 
+    .featured-text-card span {
+         font-size: 20px !important; /* Increase font size for laptop view */
+    }
+}
+
 /******************************about me ***********************************/
 body {
     margin: 0;
@@ -873,7 +879,7 @@ footer{
 
 /* Footer Title */
 .footer-left h2 {
-    font-size: 26px;  /* Adjusted size for better visibility */
+    font-size: 20px;  /* Adjusted size for better visibility */
     font-weight: bold;
     color: #333;
     text-transform: uppercase;
