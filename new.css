@@ -705,9 +705,12 @@ body {
 }
 
 /*******************experince***********************/
+
+
+/*******************experince***********************/
 .experience-section {
     position:relative;
-    max-height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -752,7 +755,7 @@ body {
 .experience-list {
     list-style: disc;
     padding: 0;
-    font-size:11px;
+    font-size:12px;
 }
 
 
@@ -762,6 +765,7 @@ body {
     transition: color 0.3s ease-in-out;
     color: white;
     font-family: "Times New Roman", Times, serif;
+    
 }
 
 .experience-list li:hover {
