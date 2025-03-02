@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uicons/1.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css">
+    <!-- --------- UNICONS ---------- -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+
+    <!-- --------- CSS ---------- -->
+    <link rel="stylesheet" href="new.css">
+
+    <title>Portfolio | Prasad</title>
+    <!-- --------- FAVICON ---------- -->
+    <link rel="icon" href="fav.jpg" type="image/x-icon">
+</head>
+
+
+
+    <body onload="startLoader()">
+        <div id="loader">
+            <h1 id="firstText" class="loader-text"> Portfolio </h1>
+            <h1 id="fullName" class="loader-text" style="display: none;"></h1>
+        </div>
+        <div id="content" style="display: none;">
+            <!-- Your Portfolio Website Content Here -->
+        </div>
+   
+    
+
+
+
+
+    <!-- --------------- HEADER --------------- -->
+    <nav id="header">
+        <div class="nav-logo">
+            <p class="nav-name">Prasad </p>
+            <span>&#128187; </span>
+        </div>
+        <div class="nav-menu" id="myNavMenu">
+            <ul class="nav_menu_list">
+                <li class="nav_list">
+                    <a href="#home" class="nav-link active-link">Home</a>
+                    <div class="circle"></div>
+                </li>
+                <li class="nav_list">
+                    <a href="#about" class="nav-link">About</a>
+                    <div class="circle"></div>
+                </li>
+                <li class="nav_list">
+                    <a href="#skills" class="nav-link">Skills</a>
+                    <div class="circle"></div>
+                </li>
+                <li class="nav_list">
+                    <a href="#projects" class="nav-link">Projects</a>
+                    <div class="circle"></div>
+                </li>
+
+                <li class="nav_list">
+                    <a href="#experience" class="nav-link">Experience</a>
+                    <div class="circle"></div>
+                </li>
+
+                <li class="nav_list">
+                    <a href="#contact" class="nav-link">Contact</a>
+                    <div class="circle"></div>
+                </li>
+            </ul>
+        </div>
+        <button class="nav-toggle" id="navToggle">&#9776;</button>
+    </nav>
+
+    
+
+    <!-- Overlay for menu -->
+    <div id="overlay" class="overlay"></div>
+
+    <!-- -------------- FEATURED BOX ---------------- -->
+    <section class="featured-box" id="home">
+        <div class="featured-image">
+            <div class="image">
+                <img src="profile.jpg" alt="avatar">
+                
+            </div>
+        </div>
+        <div class="featured-text">
+            <div class="featured-text-card">
+                <span ></span>
+            </div>
+            <div class="featured-name">
+                <p>I'm <span class="typedText"></span></p>
+            </div>
+            <div class="featured-text-info">
+                <p>Passionate about frontend, backend, database management, and AWS cloud.
+                     Focused on building scalable solutions and growing in collaborative environments.</p>
+            </div>
+            <div class="featured-text-btn">
+                <button class="btn blue-btn">Hire Me</button>
+                <button class="btn" onclick="window.location.href='Valasa-Om-Prasad-Reddy-E.pdf'">
+                    View Resume <i class="uil uil-file-alt"></i>
+                </button>
+            </div>
+            <div class="social_icons">
+                <a href="https://www.linkedin.com/in/prasad-unique" class="icon" title="Visit Prasad's LinkedIn Profile" target="_blank">
+                    <i class="uil uil-linkedin-alt"></i>
+                </a>
+
+                <a href="mailto:valasaomprasadreddy0@gmail.com" class="icon" title="Email">
+                    <i class="uil uil-envelope"></i>
+                </a>
+                
+                <script>
+                    document.querySelector(".icon[title='Email']").addEventListener("click", function(event) {
+                        event.preventDefault(); // Prevent default behavior
+                
+                        let mailtoLink = "mailto:prasad7920@gmail.com";
+                        window.location.href = mailtoLink; // Open email client
+                    });
+                </script>
+
+                <a href="https://www.hackerrank.com/profile/valasaomprasadr2" class="icon" title="HackerRank" target="_blank">
+                    <i class="uil uil-dribbble"></i>
+                </a>
+                <a href="https://github.com/prasadreddy9916" class="icon" title="GitHub" target="_blank">
+                    <i class="uil uil-github-alt"></i>
+                </a>
+
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- -------------- ABOUT BOX ---------------- -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="top-header">
+                <h1 style= color:#ffd700;>About Me</h1>
+            </div>
+            <div class="about-info">
+                <h3>My introduction</h3>
+                <p>
+                    I am VALASA OM PRASAD REDDY, from Sri Satya Sai District, Andhra Pradesh, India.
+                     I hold a B.Tech in Computer Science and Engineering and currently work as an 
+                     Associate Software Engineer at CYE Technology Pvt Ltd. With a strong programming background,
+                      I am passionate about solving complex problems and contributing to technological innovation. 
+                    My goal is to work on cutting-edge projects and collaborate with dynamic teams to build impactful solutions.
+                </p>
+                <div class="about-btn">
+                    <button class="btn" onclick="window.location.href='Valasa-Om-Prasad-Reddy-E.pdf'">
+                        View Resume <i class="uil uil-file-alt"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- -------------- SKILLS BOX ---------------- -->
+    <section class="skills-section" id="skills">
+        <div class="skills-content">
+            <h1 class="skills-title">Skills</h1>
+            <div class="skills-container">
+                <div class="skills-box" data-aos="fade-up">
+                    <div class="skills-header">
+                        <h3>Frontend</h3>
+                    </div>
+                    <div class="skills-list">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                    </div>
+                </div>
+                <div class="skills-box" data-aos="fade-up" data-aos-delay="100">
+                    <div class="skills-header">
+                        <h3>Backend</h3>
+                    </div>
+                    <div class="skills-list">
+                        <span>Python</span>
+                        <span>Java</span>
+                       
+                    </div>
+                </div>
+                <div class="skills-box" data-aos="fade-up" data-aos-delay="200">
+                    <div class="skills-header">
+                        <h3>DB/Cloud</h3>
+                    </div>
+                    <div class="skills-list">
+                        <span>MySQL</span>
+                        <span>AWS</span>
+                    </div>
+                </div>
+                <div class="skills-box" data-aos="fade-up" data-aos-delay="300">
+                    <div class="skills-header">
+                        <h3>OS/Tools</h3>
+                    </div>
+                    <div class="skills-list">
+                        <span>Linux</span>
+                        <span>GitHub</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+        });
+    </script>
+
+
+
+<!----------------------- project --------------- -->
+
+
+
+<div class="container-project-wrapper">
+    <div class="container-project" id="projects">
+        <h1>Projects</h1>
+        <h2 class="project-title" style="color:white;">E-Learning Platform</h2>
+        <div class="skills">
+            <h3>Skills Utilized</h3>
+            <ul>
+                <li>Java (Servlets & JSP)</li>
+                <li>MySQL</li>
+                <li>AWS (Hosting)</li>
+                <li>API Integration for Payment Gateway</li>
+            </ul>
+        </div>
+        <div class="description">
+            <h3>Project Description</h3>
+            <p>Developed backend for an e-learning platform with secure authentication, course management, and payment integration. Hosted on AWS for scalability and high availability.</p>
+        </div>
+        <div class="details">
+            <h3>Project Details</h3>
+            <p>This project involved creating a robust backend system to handle user authentication securely, manage different courses and their contents effectively, and integrate a seamless payment gateway to facilitate transactions. The entire platform is hosted on AWS to ensure it can scale efficiently with the growing user base and provide high availability.</p>
+        </div>
+    </div>
+</div>
+
+
+<!----------------------- experince--------------- -->
+<div class="experience-section" id="experience">
+    <h2 class="experience-heading">Experience</h2>
+    <h3 class="company-name">CYE Technology Pvt Ltd</h3>
+    
+    <div class="experience-content">
+        <div class="role-date">
+            <span class="role" style="color:indigo">Associate Software Engineer</span>
+            <span class="date">November 2024 - Present</span>
+        </div>
+        
+        <ul class="experience-list">
+            <li>Develop and maintain backend services using <b>Advanced Java</b> and <b>MySQL</b>.</li>
+            <li>Work on integrating cloud-based services using <b>AWS</b>.</li>
+            <li>Collaborate with front-end developers to design secure backend systems.</li>
+            <li>Optimize application performance and troubleshoot backend issues.</li>
+            <li>Implement automated testing strategies and CI/CD pipelines.</li>
+            <li>Contribute to backend architecture design for various projects.</li>
+        </ul>
+    </div>
+</div>
+
+
+<!----------------------- contact page --------------- -->
+
+<div class="contact-container" id="contact">
+    <h1>Contact Me</h1>
+    <form id="contactForm">
+        <div class="form-group">
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject" required>
+        </div>
+        <div class="form-group">
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" rows="2" required></textarea>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+<script>
+    document.getElementById("contactForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent page reload
+
+        let subject = document.getElementById("subject").value;
+        let userMessage = document.getElementById("message").value;
+
+        // Encode message to handle spaces and special characters
+        let encodedMessage = encodeURIComponent(userMessage);
+        let encodedSubject = encodeURIComponent(subject);
+
+        // Mailto link with pre-filled details
+        let mailtoLink = `mailto:valasaomprasadreddy0@gmail.com?subject=${encodedSubject}&body=${encodedMessage}`;
+
+        // Open default email client
+        window.location.href = mailtoLink;
+    });
+</script>
+
+
+
+
+
+
+    <!-- --------------- FOOTER --------------- -->
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-left">
+                <h2>Valasa Om Prasad Reddy</h2>
+                <ul class="footer-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-right">
+                <h3>Connect with Me</h3>
+                <div class="footer-social-icons">
+                    <a href="https://www.linkedin.com/in/prasad-unique" class="icon" target="_blank">
+                        <i class="uil uil-linkedin-alt"></i>
+                    </a>
+                    <a href="mailto:valasaomprasadreddy0@gmail.com" class="icon">
+                        <i class="uil uil-envelope"></i>
+                    </a>
+                    <a href="https://www.hackerrank.com/profile/valasaomprasadr2" target="_blank" class="icon">
+                        <i class="uil uil-dribbble"></i>
+                    </a>
+                    <a href="https://github.com/prasadreddy9916" class="icon" target="_blank">
+                        <i class="uil uil-github-alt"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="footer-divider"></div>
+    
+        <div class="bottom-footer">
+            <p>&copy; <a href="#home">Prasad</a> - All rights reserved</p>
+        </div>
+    </footer>
+    
+    
+
+
+
+
+
+
+    <script src="animation.js"></script>
+
+</body>
+
+</html>
