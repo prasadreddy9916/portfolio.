@@ -722,6 +722,7 @@ body {
     font-size: 2.5em;
     color:#ffcc00;
     margin-bottom: 30px;
+    padding-bottom :20px;
 }
 
 .company-name {
@@ -856,11 +857,14 @@ form {
     padding-bottom: 30px;
     font-size: 3em;
     color: #ffd700;
+    margin-bottom :20px;
+    
 }
 
 
 /* Form Fields */
 .form-group {
+    
     margin: 15px 0;
     text-align: left;
 }
