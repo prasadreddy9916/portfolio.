@@ -1,138 +1,174 @@
-
-//loader
-
+// Loader Animation
 function startLoader() {
+    const firstText = document.getElementById("firstText");
+    const fullName = document.getElementById("fullName");
+    const loader = document.getElementById("loader");
+    const content = document.getElementById("content");
+    
     setTimeout(() => {
-        // Hide "Prasad" after 2 seconds
-        document.getElementById("firstText").style.display = "none";
-
-        // Show full name with typing effect
-        let fullName = "PRASAD";
-        let nameElement = document.getElementById("fullName");
-        nameElement.style.display = "block";
-        nameElement.classList.add("typing");
-
-        let i = 0;
-        function type() {
-            if (i < fullName.length) {
-                nameElement.innerHTML += fullName.charAt(i);
-                i++;
-                setTimeout(type, 100);
-            } else {
-                // After typing is complete, load the website
-                setTimeout(() => {
-                    document.getElementById("loader").style.display = "none";
-                    document.getElementById("content").style.display = "block";
-                }, 1000);
+        firstText.style.opacity = "0";
+        setTimeout(() => {
+            firstText.style.display = "none";
+            fullName.style.display = "block";
+            fullName.classList.add("typing");
+            
+            const name = "PRASAD";
+            let i = 0;
+            
+            function type() {
+                if (i < name.length) {
+                    fullName.textContent += name[i];
+                    i++;
+                    setTimeout(type, 120);
+                } else {
+                    setTimeout(() => {
+                        loader.style.opacity = "0";
+                        setTimeout(() => {
+                            loader.style.display = "none";
+                            content.style.display = "block";
+                            content.style.opacity = "1";
+                        }, 400);
+                    }, 800);
+                }
             }
-        }
-        type();
-    }, 2000);
+            
+            type();
+        }, 200);
+    }, 1800);
 }
 
-
-
-
-
-
-
-document.addEventListener("DOMContentLoaded", function () {
+// Typing Animation for Home Section
+document.addEventListener("DOMContentLoaded", () => {
     const typedTextSpan = document.querySelector(".typedText");
     const textArray = ["Backend Developer", "Frontend Developer", "Cloud Engineer"];
-    const colors = ["#2e79ba", "#5fc9f3", "#9ba6a5"]; // Text colors
-    let textArrayIndex = 0;
+    const colors = ["#8b5cf6", "#14b8a6", "#f97316"];
+    let textIndex = 0;
     let charIndex = 0;
-    let typingForward = true;
+    let isTyping = true;
 
     function type() {
-        if (typingForward) {
-            if (charIndex < textArray[textArrayIndex].length) {
-                typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
+        if (isTyping) {
+            if (charIndex < textArray[textIndex].length) {
+                typedTextSpan.textContent += textArray[textIndex][charIndex];
                 charIndex++;
-                setTimeout(type, 100);
+                setTimeout(type, 90);
             } else {
-                typingForward = false;
-                setTimeout(type, 2000);
+                isTyping = false;
+                setTimeout(type, 1800);
             }
         } else {
             if (charIndex > 0) {
-                typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex - 1);
+                typedTextSpan.textContent = textArray[textIndex].slice(0, charIndex - 1);
                 charIndex--;
-                setTimeout(type, 100);
+                setTimeout(type, 70);
             } else {
-                typingForward = true;
-                textArrayIndex = (textArrayIndex + 1) % textArray.length;
-
-                // Change text color dynamically
-                typedTextSpan.style.color = colors[textArrayIndex];
-
-                setTimeout(type, 1000);
+                isTyping = true;
+                textIndex = (textIndex + 1) % textArray.length;
+                typedTextSpan.style.color = colors[textIndex];
+                setTimeout(type, 400);
             }
         }
     }
 
-    // Initialize first text color
-    typedTextSpan.style.color = colors[textArrayIndex];
+    typedTextSpan.style.color = colors[textIndex];
     type();
 
+    // Featured Text Card Animation
     const textCardSpan = document.querySelector(".featured-text-card span");
-    const textCardArray = ["Valasa Om Prasad Reddy"];
-    
+    const cardText = "Valasa Om Prasad Reddy";
     let cardCharIndex = 0;
-    
+
     function typeCard() {
-        if (cardCharIndex < textCardArray[0].length) {
-            textCardSpan.textContent += textCardArray[0].charAt(cardCharIndex);
-            
+        if (cardCharIndex < cardText.length) {
+            textCardSpan.textContent += cardText[cardCharIndex];
             cardCharIndex++;
-            setTimeout(typeCard, 100);
+            setTimeout(typeCard, 70);
         }
     }
-    
-    // Start typing animation
+
     typeCard();
-    
-    // Change color of featured text card
-    function changeColor() {
-        const colors = ["brown", "brown", "brown"];
-        let colorIndex = 0;
-        setInterval(() => {
-            textCardSpan.parentElement.style.color = colors[colorIndex];
-            textCardSpan.parentElement.style.fontSize = "25px";
-            colorIndex = (colorIndex + 1) % colors.length;
-        }, 3000);
+
+    // Slideshow for Profile Images
+    const slides = document.querySelectorAll(".slide");
+    const dots = document.querySelectorAll(".dot");
+    let slideIndex = 0;
+
+    function showSlide(index) {
+        slides.forEach(slide => slide.classList.remove("active"));
+        dots.forEach(dot => dot.classList.remove("active"));
+        slides[index].classList.add("active");
+        dots[index].classList.add("active");
     }
-    
-    // Start color change
-    changeColor();
-});
 
-//toggle menu
-document.getElementById('navToggle').addEventListener('click', function() {
-    document.getElementById('myNavMenu').classList.toggle('open');
-    document.getElementById('overlay').classList.toggle('show');
-});
+    function nextSlide() {
+        slideIndex = (slideIndex + 1) % slides.length;
+        showSlide(slideIndex);
+    }
 
-document.getElementById('overlay').addEventListener('click', function() {
-    document.getElementById('myNavMenu').classList.remove('open');
-    document.getElementById('overlay').classList.remove('show');
-});
+    showSlide(slideIndex);
+    setInterval(nextSlide, 4000);
 
-document.querySelectorAll('.nav-link').forEach(link => {
-    link.addEventListener('click', function() {
-        document.getElementById('myNavMenu').classList.remove('open');
-        document.getElementById('overlay').classList.remove('show');
+    // Navigation Active Link
+    const navLinks = document.querySelectorAll(".nav-link");
+    navLinks.forEach(link => {
+        link.addEventListener("click", () => {
+            navLinks.forEach(l => l.classList.remove("active-link"));
+            link.classList.add("active-link");
+        });
+    });
+
+    // Highlight Active Section
+    const sections = document.querySelectorAll("section, .experience-section");
+    window.addEventListener("scroll", () => {
+        let current = "";
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            if (pageYOffset >= sectionTop - 60 && pageYOffset < sectionTop + sectionHeight - 60) {
+                current = section.getAttribute("id");
+            }
+        });
+
+        navLinks.forEach(link => {
+            link.classList.remove("active-link");
+            if (link.getAttribute("href").substring(1) === current) {
+                link.classList.add("active-link");
+            }
+        });
     });
 });
 
-// Close the toggle menu when clicking outside of it
-document.addEventListener('click', function(event) {
-    const navMenu = document.getElementById('myNavMenu');
-    const navToggle = document.getElementById('navToggle');
-    const overlay = document.getElementById('overlay');
+// Navigation Toggle
+const navToggle = document.getElementById("navToggle");
+const navMenu = document.getElementById("myNavMenu");
+const overlay = document.getElementById("overlay");
 
+navToggle.addEventListener("click", () => {
+    navMenu.classList.toggle("open");
+    overlay.classList.toggle("show");
+});
+
+overlay.addEventListener("click", () => {
+    navMenu.classList.remove("open");
+    overlay.classList.remove("show");
+});
+
+document.querySelectorAll(".nav-link").forEach(link => {
+    link.addEventListener("click", () => {
+        navMenu.classList.remove("open");
+        overlay.classList.remove("show");
+    });
+});
+
+document.addEventListener("click", (event) => {
     if (!navMenu.contains(event.target) && !navToggle.contains(event.target) && !overlay.contains(event.target)) {
-        navMenu.classList.remove('open');
-        overlay.classList.remove('show');
+        navMenu.classList.remove("open");
+        overlay.classList.remove("show");
     }
+});
+
+// AOS Initialization
+AOS.init({
+    duration: 1000,
+    once: true,
 });
