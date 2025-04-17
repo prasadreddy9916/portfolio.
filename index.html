@@ -323,6 +323,30 @@
 
         <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
         <script src="animation.js"></script>
+
+    
+<script>
+    document.getElementById("contactForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent page reload
+
+        let subject = document.getElementById("subject").value;
+        let userMessage = document.getElementById("message").value;
+
+        // Encode message to handle spaces and special characters
+        let encodedMessage = encodeURIComponent(userMessage);
+        let encodedSubject = encodeURIComponent(subject);
+
+        // Mailto link with pre-filled details
+        let mailtoLink = `mailto:saimounikareddypamidi@gmail.com?subject=${encodedSubject}&body=${encodedMessage}`;
+
+        // Open default email client
+        window.location.href = mailtoLink;
+    });
+</script>
+
+
+
+        
     </div>
 </body>
 
