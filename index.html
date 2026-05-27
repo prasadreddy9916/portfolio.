@@ -4,10 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Valasa Om Prasad Reddy</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uicons/1.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="new.css">
-    <title>Portfolio | Prasad</title>
+    
     <link rel="icon" href="fav.png" type="image/x-icon">
 </head>
 
@@ -16,406 +29,653 @@
         <h1 id="firstText" class="loader-text">Portfolio</h1>
         <h1 id="fullName" class="loader-text" style="display: none;"></h1>
     </div>
+    
     <div id="content" style="display: none;">
-        <!-- --------------- HEADER --------------- -->
+        <!-- NAVIGATION (Logo on Right) -->
         <nav id="header">
-            <div class="nav-logo">
-                <p class="nav-name">Prasad</p>
-                <span></span>
+            <div class="container nav-container">
+                <button class="nav-toggle" id="navToggle"><i class="uil uil-bars"></i></button>
+                <div class="nav-menu" id="myNavMenu">
+                    <ul class="nav_menu_list">
+                        <li class="nav_list"><a href="#home" class="nav-link active-link">Home</a></li>
+                        <li class="nav_list"><a href="#about" class="nav-link">About</a></li>
+                        <li class="nav_list"><a href="#skills" class="nav-link">Skills</a></li>
+                        <li class="nav_list"><a href="#experience" class="nav-link">Experience</a></li>
+                        <li class="nav_list"><a href="#projects" class="nav-link">Projects</a></li>
+                        <li class="nav_list"><a href="#education" class="nav-link">Education</a></li>
+                        <li class="nav_list"><a href="#features" class="nav-link">Expertise</a></li>
+                        <li class="nav_list"><a href="#contact" class="nav-link">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="nav-logo">
+                    <a href="#home" class="logo-text">VP<span>.</span></a>
+                </div>
             </div>
-            <div class="nav-menu" id="myNavMenu">
-                <ul class="nav_menu_list">
-                    <li class="nav_list">
-                        <a href="#home" class="nav-link active-link">Home</a>
-                        <div class="circle"></div>
-                    </li>
-                    <li class="nav_list">
-                        <a href="#about" class="nav-link">About</a>
-                        <div class="circle"></div>
-                    </li>
-                    <li class="nav_list">
-                        <a href="#skills" class="nav-link">Skills</a>
-                        <div class="circle"></div>
-                    </li>
-                    <li class="nav_list">
-                        <a href="#projects" class="nav-link">Projects</a>
-                        <div class="circle"></div>
-                    </li>
-                    <li class="nav_list">
-                        <a href="#education" class="nav-link">Education</a>
-                        <div class="circle"></div>
-                    </li>
-                    <li class="nav_list">
-                        <a href="#experience" class="nav-link">Experience</a>
-                        <div class="circle"></div>
-                    </li>
-                    <li class="nav_list">
-                        <a href="#contact" class="nav-link">Contact</a>
-                        <div class="circle"></div>
-                    </li>
-                </ul>
-            </div>
-            <button class="nav-toggle" id="navToggle">☰</button>
         </nav>
 
-        <!-- Overlay for menu -->
-        <div id="overlay" class="overlay"></div>
-
-        <!-- -------------- FEATURED BOX ---------------- -->
+        <!-- HERO SECTION -->
         <section class="featured-box" id="home">
-            <div class="featured-image">
-                <div class="image">
-                    <div class="slideshow-container">
-                        <img class="slide" src="profile1.jpg" alt="avatar">
-                        <img class="slide" src="profile2.jpg" alt="avatar">
-                        <img class="slide" src="profile3.jpg" alt="avatar">
+            <div class="container">
+                <div class="hero-content">
+                    <!-- Blinking Badge (Top Right of Hero) -->
+                    <div class="hero-badge-wrapper" data-aos="fade-down">
+                        <div class="hero-badge">
+                            <span class="status-dot"></span>
+                            <span>Available for Work</span>
+                        </div>
                     </div>
-                    <div class="dots">
-                        <span class="dot active"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
+
+                    <div class="hero-text-info">
+                        <div class="hero-title" data-aos="fade-up" data-aos-delay="100">
+                            <h1>Hello, I'm <br> <span class="highlight">Valasa Om Prasad Reddy</span></h1>
+                        </div>
+                        <div class="hero-subtitle" data-aos="fade-up" data-aos-delay="200">
+                            <h2>I am a <span class="typedText"></span></h2>
+                        </div>
+                        <div class="hero-desc" data-aos="fade-up" data-aos-delay="300">
+                            <p>
+                                Expert in crafting high-performance scalable applications using Python, Django, FastAPI, and Modern React. 
+                                Focused on backend optimization, cloud architecture, and delivering seamless user experiences.
+                            </p>
+                        </div>
+                        <div class="hero-actions" data-aos="fade-up" data-aos-delay="400">
+                            <a href="#contact" class="btn primary-btn">Let's Talk <i class="uil uil-message"></i></a>
+                            <a href="Valasa-Om-Prasad-Reddy-PS.pdf" class="btn secondary-btn" download>Download CV <i class="uil uil-download-alt"></i></a>
+                        </div>
+                        <div class="social-links" data-aos="fade-up" data-aos-delay="500">
+                            <a href="https://www.linkedin.com/in/prasad-unique" target="_blank" class="social-icon"><i class="uil uil-linkedin"></i></a>
+                            <a href="https://github.com/prasadreddy9916" target="_blank" class="social-icon"><i class="uil uil-github"></i></a>
+                            <a href="mailto:omprasadreddyvalasa@gmail.com" class="social-icon"><i class="uil uil-envelope"></i></a>
+                            <a href="https://www.hackerrank.com/profile/valasaomprasadr2" target="_blank" class="social-icon"><i class="uil uil-dribbble"></i></a>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="featured-text">
-                <div class="featured-text-card">
-                    <span></span>
-                </div>
-                <div class="featured-name">
-                    <p>I'm <span class="typedText"></span></p>
-                </div>
-                <div class="featured-text-info">
-                    <p>Passionate about frontend, backend, database management, and AWS cloud. Focused on building scalable solutions and growing in collaborative environments.</p>
-                </div>
-                <div class="featured-text-btn">
-                    <button class="btn blue-btn">Hire Me</button>
-                    <button class="btn" onclick="window.location.href='Valasa-Om-Prasad-Reddy-PS.pdf'">
-                        View Resume <i class="uil uil-file-alt"></i>
-                    </button>
-                </div>
-                <div class="social_icons">
-                    <a href="https://www.linkedin.com/in/prasad-unique" class="icon" title="Visit Prasad's LinkedIn Profile" target="_blank">
-                        <i class="uil uil-linkedin-alt"></i>
-                    </a>
-                    <a href="mailto:valasaomprasadreddy0@gmail.com" class="icon" title="Email">
-                        <i class="uil uil-envelope"></i>
-                    </a>
-                    <a href="https://www.hackerrank.com/profile/valasaomprasadr2" class="icon" title="HackerRank" target="_blank">
-                        <i class="uil uil-dribbble"></i>
-                    </a>
-                    <a href="https://github.com/prasadreddy9916" class="icon" title="GitHub" target="_blank">
-                        <i class="uil uil-github-alt"></i>
-                    </a>
+                    <div class="hero-image-wrapper" data-aos="zoom-in" data-aos-delay="200">
+                        <!-- Circular Image Slideshow -->
+                        <div class="hero-img-circle">
+                            <div class="slideshow-container">
+                                <img class="slide-img active" src="profile1.jpg" alt="Profile 1">
+                                <img class="slide-img" src="profile2.jpg" alt="Profile 2">
+                                <img class="slide-img" src="profile3.jpg" alt="Profile 3">
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- -------------- ABOUT BOX ---------------- -->
+        <!-- ABOUT SECTION -->
         <section class="section" id="about">
             <div class="container">
-                <div class="top-header">
-                    <h1 class="section-heading">About Me</h1>
-                </div>
-                <div class="about-info">
-                    <h3>My introduction</h3>
-                    <p>
-                        I am VALASA OM PRASAD REDDY, from Sri Satya Sai District, Andhra Pradesh, India.
-                        I hold a B.Tech in Computer Science and Engineering and currently work as an 
-                        Associate Software Engineer at CYE Technology Pvt Ltd. With a strong programming background,
-                        I am passionate about solving complex problems and contributing to technological innovation. 
-                        My goal is to work on cutting-edge projects and collaborate with dynamic teams to build impactful solutions.
-                    </p>
-                    <div class="about-btn">
-                        <button class="btn" onclick="window.location.href='Valasa-Om-Prasad-Reddy-PS.pdf'">
-                            View Resume <i class="uil uil-file-alt"></i>
-                        </button>
+                <h2 class="section-heading" data-aos="fade-up">About Me</h2>
+                <p class="section-subtitle" data-aos="fade-up">Get to know me better</p>
+                
+                <div class="about-grid">
+                    <div class="about-text" data-aos="fade-right">
+                        <p>
+                            I am a <strong>Python Full Stack Developer</strong> with a strong foundation in computer science principles and 3+ years of hands-on experience building scalable web applications.
+                        </p>
+                        <p>
+                            My journey began with a curiosity for how things work on the web, which led me to master the Python ecosystem. Today, I specialize in building robust backends with <strong>Django, FastAPI, and Flask</strong>, and crafting intuitive frontends with <strong>React JS</strong>.
+                        </p>
+                        <p>
+                            I am passionate about clean code, efficient algorithms, and cloud infrastructure. Whether it's optimizing database queries, I bring a problem-solving mindset to every challenge.
+                        </p>
+                    </div>
+                    <div class="about-stats" data-aos="fade-left">
+                        <div class="stat-card">
+                            <h3>3+</h3>
+                            <p>Years Experience</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3>10+</h3>
+                            <p>Projects Completed</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3>100%</h3>
+                            <p>Client Satisfaction</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-       <!-- -------------- SKILLS BOX ---------------- -->
-<section class="skills-section" id="skills">
-    <div class="skills-content">
-        <h1 class="skills-title section-heading">Skills</h1>
-        <div class="skills-container">
-            <div class="skills-box" data-aos="fade-up">
-                <div class="skills-header">
-                    <h3>Frontend</h3>
-                </div>
-                <div class="skills-list">
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>JavaScript</span>
-                    
-                </div>
-            </div>
-            <div class="skills-box" data-aos="fade-up" data-aos-delay="100">
-                <div class="skills-header">
-                    <h3>Backend</h3>
-                </div>
-                <div class="skills-list">
-                    
-                    <span>Java</span>
-                  
-                </div>
-            </div>
-            <div class="skills-box" data-aos="fade-up" data-aos-delay="200">
-                <div class="skills-header">
-                    <h3>Frameworks</h3>
-                </div>
-                <div class="skills-list">
-                    <span>Spring Boot</span>
-                    <span>Spring Security</span>
-                    <span>Hibernate/JPA</span>
-                    <span>Spring Cloud</span>
-                     <span>React</span>
-                   
-                </div>
-            </div>
-            <div class="skills-box" data-aos="fade-up" data-aos-delay="300">
-                <div class="skills-header">
-                    <h3>DB/Cloud</h3>
-                </div>
-                <div class="skills-list">
-                    <span>MySQL</span>
-                    <span>AWS (EC2, S3, RDS, IAM,VPC,ECS,SES)</span>
-                      <span>Github Actions</span>
-                    <span>Docker</span>
+        <!-- SKILLS SECTION -->
+        <section class="section" id="skills">
+            <div class="container">
+                <h2 class="section-heading" data-aos="fade-up">Technical Arsenal</h2>
+                <p class="section-subtitle" data-aos="fade-up">Libraries, Frameworks, and Tools</p>
 
-                    
-                </div>
-            </div>
-            <div class="skills-box" data-aos="fade-up" data-aos-delay="400">
-                <div class="skills-header">
-                    <h3>Tools & Methodologies</h3>
-                </div>
-                <div class="skills-list">
-                    <span>Postman</span>
-                    <span>Linux</span>
-                    <span>Git/GitHub</span>
-                    <span>VS Code</span>
-                    <span>Eclipse</span>
-                     <span>Maven</span>
-                    <span>SDLC (Agile)</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-        
- <!-- -------------- PROJECTS ---------------- -->
-<section class="projects-section" id="projects">
-    <div class="projects-content">
-        <h1 class="projects-title section-heading">Projects</h1>
-        <div class="projects-container">
-            
-            <!-- Job Portal System Project Card -->
-            <div class="project-card" data-aos="fade-up">
-                <h2 class="project-title">Job Portal System</h2>
-                <div class="project-skills">
-                    <h3>Skills & Tools Utilized</h3>
-                    <ul>
-                        <li>Java</li>
-                        <li>JavaScript</li>
-                        <li>Spring Boot</li>
-                        <li>Spring Security</li>
-                        <li>Spring Cloud</li>
-                        <li>MySQL</li>
-                        <li>Hibernate/JPA</li>
-                        <li>React</li>
-                        <li>AWS (EC2, S3, RDS, IAM, ECS, VPC)</li>
-                        <li>Docker</li>
-                        <li>Git</li>
-                        
-                        <li>Maven</li>
-                        <li>Swagger/OpenAPI</li>
-                        <li>Postman</li>
-                        <li>Role-Based Access Control</li>
-                    </ul>
-                </div>
-                <div class="project-description">
-                    <h3>Project Description</h3>
-                    <p>
-                       Developed a microservices-based Job Portal application using Java, Spring Boot, Spring Cloud, Spring Security (JWT), React, MySQL, and Docker, supporting four user panels including Super Admin, Manager, Recruiter, and Job Seekers. 
-                        Designed responsive UI screens using React with role-based dashboards and built secure REST APIs for job postings, applications, interview tracking, and ticket management. 
-                        Implemented asynchronous and batch processing to handle large data uploads, automated notifications, and background tasks, improving overall system performance and efficiency by approximately 20%.
-                    </p>
-                </div>
-            </div>
+                <div class="skills-grid">
+                    <!-- Backend Core -->
+                    <div class="skill-category-card" data-aos="fade-up" data-aos-delay="100">
+                        <h3><i class="uil uil-server"></i> Backend Core</h3>
+                        <div class="skill-tags">
+                               <span class="skill-tag">Python</span>
+                            <span class="skill-tag">Django</span>
+                            <span class="skill-tag">Django REST Framework</span>
+                            <span class="skill-tag">FastAPI</span>
+                            <span class="skill-tag">Flask</span>
+                            <span class="skill-tag">Numpy</span>
+                            <span class="skill-tag">Microservices</span>
+                            <span class="skill-tag">REST API</span>
+                        </div>
+                    </div>
 
-            <!-- Workforce 360 Project Card -->
-            <div class="project-card" data-aos="fade-up">
-                <h2 class="project-title">Workforce 360</h2>
-                <div class="project-skills">
-                    <h3>Skills & Tools Utilized</h3>
-                    <ul>
-                        <li>Java</li>
-                        <li>JavaScript</li>
-                        <li>Spring Boot</li>
-                        <li>MySQL</li>
-                        <li>Hibernate/JPA</li>
-                        <li>React</li>
-                        <li>AWS (EC2, S3, RDS, IAM, ECS, VPC,SES)</li>
-                        <li>Docker</li>
-                        <li>Git</li>
-                        <li>GitHub</li>
-                        <li>Maven</li>
-                        <li>Swagger/OpenAPI</li>
-                        <li>Postman</li>
-                        
-                        <li>Role-Based Access Control</li>
-                    
-                    </ul>
-                </div>
-                <div class="project-description">
-                    <h3>Project Description</h3>
-                    <p>
-                       Worked as a Java Full Stack Developer on a monolithic application, contributing to end-to-end development using Spring Boot, React, MySQL, Docker, and AWS integrations. 
-                        Developed and optimized backend services and RESTful APIs with business logic, MySQL indexing, caching, and asynchronous processing for better performance and scalability, while building responsive React UI components using pagination and hooks like useMemo and useCallback.
-                        Implemented automated onboarding, exam, and payroll modules with role-based access and session-based authentication, and integrated AWS S3 for document storage, SES for email notifications, and Google Calendar/Meet for automated scheduling.
-                    </p>
-                </div>
-            </div>
+                    <!-- Frontend & Libraries -->
+                    <div class="skill-category-card" data-aos="fade-up" data-aos-delay="200">
+                        <h3><i class="uil uil-desktop-alt"></i> Frontend & Libs</h3>
+                        <div class="skill-tags">
+                              <span class="skill-tag">React JS</span>
+                            <span class="skill-tag">Redux</span>
+                            <span class="skill-tag">JavaScript (ES6+)</span>
+                            <span class="skill-tag">HTML5/CSS3</span>
+                            <span class="skill-tag">Axios</span>
+                            <span class="skill-tag">Vite</span>
+                        </div>
+                    </div>
 
-        </div>
-    </div>
-</section>
+                    <!-- Database & Cloud -->
+                    <div class="skill-category-card" data-aos="fade-up" data-aos-delay="300">
+                        <h3><i class="uil uil-database"></i> Data & Cloud</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">MySQL</span>
+                            <span class="skill-tag">sqlalchemy</span>
+                            <span class="skill-tag">SQLModel</span>
+                            
+                            <span class="skill-tag">SQLite</span>
+                            <span class="skill-tag">AWS (S3, RDS, EC2,CloudWatch,VPC,IAM)</span>
+                            
+                            <span class="skill-tag">Redis</span>
+                        </div>
+                    </div>
 
-        <!-- -------------- EDUCATION ---------------- -->
-        <section class="education-section" id="education">
-            <div class="education-content">
-                <h1 class="education-heading section-heading">Education</h1>
-                <div class="education-item">
-                    <h3 class="degree">B.Tech (CSE)</h3>
-                    <p class="duration">2020 – 2024</p>
-                    <p class="location">Markapur, Andhra Pradesh</p>
-                    <p class="institute">Dr. Samuel George Institute of Engineering and Technology</p>
+                    <!-- DevOps & Tools -->
+                    <div class="skill-category-card" data-aos="fade-up" data-aos-delay="400">
+                        <h3><i class="uil uil-process"></i> DevOps & Tools</h3>
+                        <div class="skill-tags">
+                           <span class="skill-tag">Git/GitHub</span>
+                            <span class="skill-tag">Postman</span>
+                             <span class="skill-tag">Swagger UI</span>
+                            <span class="skill-tag">Linux</span>
+                             <span class="skill-tag">Windows</span>
+                            <span class="skill-tag">PyCharm</span>
+                            <span class="skill-tag">VS Code</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-      <!-- -------------- EXPERIENCE ---------------- -->
-<section class="experience-section" id="experience">
-    <h2 class="experience-heading section-heading">Experience</h2>
-    <div class="timeline">
-        <div class="timeline-item">
-            <div class="timeline-content">
-                <h3 class="company-name">CYE Technology Pvt Ltd</h3>
-                <div class="role-date">
-                    <span class="role">Associate Software Engineer</span>
-                    <span class="date">November 2024 - Present</span>
+        <!-- EXPERIENCE SECTION -->
+        <section class="section" id="experience">
+            <div class="container">
+                <h2 class="section-heading" data-aos="fade-up">Experience</h2>
+                <p class="section-subtitle" data-aos="fade-up">My professional journey</p>
+
+                <div class="timeline">
+                    <!-- Job 1 -->
+                    <div class="timeline-item" data-aos="fade-up">
+                        <div class="timeline-content">
+                            <h3 class="company-name">Luminaire Technologies</h3>
+                            <span class="date">April 2025 - Present</span>
+                            <div class="role">Python Full Stack Developer</div>
+                            <p style="margin-bottom: 10px; font-size: 0.9rem; color: var(--accent);">Client: Reliance</p>
+                            <ul class="timeline-list">
+                                <li>Developed scalable REST APIs using Python and Django for fashion trend modules.</li>
+                                <li>Built responsive React JS components for real-time data analysis.</li>
+                                <li>Implemented JWT authentication, rate limiting, and AWS S3 integration.</li>
+                                <li>Optimized database queries and monitored logs via AWS CloudWatch.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Job 2 -->
+                    <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+                        <div class="timeline-content">
+                            <h3 class="company-name">Cye Technology Pvt Ltd</h3>
+                            <span class="date">Nov 2024 - Mar 2025</span>
+                            <div class="role">Python Full Stack Developer</div>
+                            <ul class="timeline-list">
+                                <li>Developed a full-stack Job Portal using Python (FastAPI) and React.</li>
+                                <li>Implemented Role-Based Access Control (RBAC) and JWT security.</li>
+                                <li>Managed MySQL database with AWS RDS integration.</li>
+                                <li>Collaborated in Agile sprints and performed API testing via Postman.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Job 3 -->
+                    <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+                        <div class="timeline-content">
+                            <h3 class="company-name">Intechfy Solutions</h3>
+                            <span class="date">June 2023 - Nov 2024</span>
+                            <div class="role">Python Developer</div>
+                            <p style="margin-bottom: 10px; font-size: 0.9rem; color: var(--accent);">Client: DXC Technology</p>
+                            <ul class="timeline-list">
+                                <li>Engineered backend logic for EMI calculations and loan workflows using Django.</li>
+                                <li>Integrated AWS S3 for secure financial document management.</li>
+                                <li>Optimized MySQL schemas and validated API endpoints.</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                <ul class="experience-list">
-
-<li>Engineered scalable backend systems using <b>Java 21</b> and <b>Spring Boot</b> with <b>Spring Cloud</b>, delivering secure APIs protected through <b>JWT-based authentication</b> and role-level authorization.</li>
-
-<li>Built high-performance API layers with <b>MySQL</b> and <b>Hibernate/JPA</b>, focusing on query optimization, data consistency, and efficient request handling.</li>
-
-<li>Delivered seamless full-stack features by coupling <b>React-based</b> user interfaces with backend microservices, enabling smooth data flow and responsive user experiences.</li>
-
-<li>Packaged and ran backend applications using <b>Docker containers</b>, ensuring environment consistency across development and deployment setups.</li>
-
-<li>Improved application reliability by following clean coding standards, structured exception handling, request validation, and centralized logging practices.</li>
-
-<li>Created clear and developer-friendly API specifications using <b>Swagger/OpenAPI</b> to simplify frontend integration and testing.</li>
-
-<li>Assisted with running and maintaining applications on <b>AWS platforms</b>, supporting container-based deployments and environment configurations.</li>
-
-<li>Worked closely within <b>Agile Scrum teams</b>, contributing to sprint activities, peer code reviews, and collaborative problem-solving.</li>
-
-                </ul>
             </div>
-        </div>
-    </div>
-</section>
-
-        <!-- -------------- CONTACT PAGE ---------------- -->
-        <section class="contact-container" id="contact">
-            <h1 class="section-heading">Contact Me</h1>
-            <form id="contactForm">
-                <div class="form-group">
-                    <label for="email">Your Email:</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="subject">Subject:</label>
-                    <input type="text" id="subject" name="subject" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Your Message:</label>
-                    <textarea id="message" name="message" rows="2" required></textarea>
-                </div>
-                <button type="submit">Submit</button>
-            </form>
         </section>
 
-        <!-- --------------- FOOTER --------------- -->
+        <!-- PROJECTS SECTION -->
+        <section class="section" id="projects">
+            <div class="container">
+                <h2 class="section-heading" data-aos="fade-up">Featured Projects</h2>
+                <p class="section-subtitle" data-aos="fade-up">Real-world solutions I've built</p>
+
+                <div class="projects-wrapper">
+                    <!-- Project 1 -->
+                    <div class="project-card" data-aos="fade-up">
+                        <div class="project-header">
+                            <h3>Fashion Trend Platform</h3>
+                            <div class="project-tech-stack">
+                                <span class="tech-pill">Python</span>
+                                <span class="tech-pill">Django</span>
+                                <span class="tech-pill">Django REST Framework</span>
+                                <span class="tech-pill">React</span>
+                                <span class="tech-pill">AWS</span>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <p class="project-desc">
+                                A Next Wave platform analyzing fashion trends from multiple e-commerce sources like Amazon and Nykaa.
+                            </p>
+                            <div class="project-features">
+                                <h4>Key Features:</h4>
+                                <ul>
+                                    <li>Data synchronization & trend analysis</li>
+                                    <li>JWT Authentication & Rate Limiting</li>
+                                    <li>Responsive React Dashboard</li>
+                                     <li>Data synchronization & trend analysis using Python & Django</li>
+                                    <li>API integration & data aggregation with REST APIs</li>
+                                    <li>Responsive dashboard development using React JS</li>
+                                    <li>MySQL database optimization & backend processing</li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="project-header">
+                            <h3>Insurance Management System</h3>
+                            <div class="project-tech-stack">
+                                <span class="tech-pill">Django DRF</span>
+                                <span class="tech-pill">MySQL</span>
+                                <span class="tech-pill">React</span>
+                                <span class="tech-pill">AWS S3</span>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <p class="project-desc">
+                                Enterprise application for DXC Technology to manage policies, claims, and renewals digitally.
+                            </p>
+                            <div class="project-features">
+                                <h4>Key Features:</h4>
+                                <ul>
+                                    <li>Automated financial workflows</li>
+                                    <li>Secure document handling via S3</li>
+                                    <li>Django Signals for notifications</li>
+                                     <li>Policy management & claims processing using Django</li>
+                                    
+                                    <li>PDF report generation & secure document handling</li>
+                                    <li>MySQL database optimization & workflow automation</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3: TalentSphere HRMS -->
+                    <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="project-header">
+                            <h3>TalentSphere HRMS</h3>
+                            <div class="project-tech-stack">
+                                <span class="tech-pill">FastAPI</span>
+                                <span class="tech-pill">Python</span>
+                                <span class="tech-pill">React JS</span>
+                                <span class="tech-pill">AWS</span>
+                                <span class="tech-pill">MySQL</span>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <p class="project-desc">
+                                A comprehensive Human Resource Management System streamlining employee management, payroll, and recruitment workflows.
+                            </p>
+                            <div class="project-features">
+                                <h4>Key Responsibilities:</h4>
+                                <ul>
+                                    <li>Developed scalable REST APIs using FastAPI for HR modules.</li>
+                                    <li>Implemented JWT authentication & Role-Based Access Control (RBAC).</li>
+                                    <li>Built responsive dashboards using React JS for HR & Employees.</li>
+                                    <li>Optimized MySQL queries for payroll & attendance tracking.</li>
+                                    <li>Automated workflows and managed deployment via Git & AWS.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 4 -->
+                    <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="project-header">
+                            <h3>Advanced Job Portal</h3>
+                            <div class="project-tech-stack">
+                                <span class="tech-pill">FastAPI</span>
+                                <span class="tech-pill">Python</span>
+                                <span class="tech-pill">MySQL</span>
+                                <span class="tech-pill">SQLModel</span>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <p class="project-desc">
+                                A scalable job portal with search, filtering, and personalized recommendations.
+                            </p>
+                            <div class="project-features">
+                                <h4>Key Features:</h4>
+                                <ul>
+                                    <li>Role-Based Access Control (RBAC)</li>
+                                    <li>Async APIs for efficient data processing</li>
+                                    <li>Rate limiting for applicants</li>
+                                     <li>Resume upload & search filtering with MySQL</li>
+                                    <li>Recruiter dashboard development using React JS</li>
+                                    <li>REST API integration & JWT-based authentication</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 5: DoctorHub -->
+                        <div class="project-card" data-aos="fade-up" data-aos-delay="400">
+                            <div class="project-header">
+                                <h3>DoctorHub - Healthcare Management (Own Project)</h3>
+                                <div class="project-tech-stack">
+                                    <span class="tech-pill">Python</span>
+                                    <span class="tech-pill">Flask</span>
+                                    <span class="tech-pill">React JS</span>
+                                    <span class="tech-pill">MySQL</span>
+                                   
+                                </div>
+                            </div>
+                            <div class="project-body">
+                                <p class="project-desc">
+                                    A comprehensive healthcare platform streamlining doctor appointment booking, patient management, and hospital workflows.
+                                </p>
+                                <div class="project-features">
+                                    <h4>Key Responsibilities:</h4>
+                                    <ul>
+                                        <li>Developed scalable REST APIs for appointment booking & patient management using Flask.</li>
+                                        <li>Implemented JWT authentication & Role-Based Access Control (RBAC) for Doctors, Patients, and Admins.</li>
+                                        <li>Built responsive frontend pages using React JS for scheduling and records.</li>
+                                        <li>Optimized MySQL database queries for faster data retrieval.</li>
+                                       
+                                       
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- EDUCATION SECTION -->
+        <section class="section" id="education">
+            <div class="container">
+                <h2 class="section-heading" data-aos="fade-up">Education</h2>
+                <p class="section-subtitle" data-aos="fade-up">Academic Background</p>
+                
+                <div style="max-width: 800px; margin: 0 auto;">
+                    <div class="edu-card" data-aos="fade-up">
+                        <span class="edu-year">2020 - 2024</span>
+                        <h3>B.Tech (Computer Science & Engineering)</h3>
+                        <p style="color: var(--text-muted);">Dr. Samuel George Institute of Engineering and Technology, Markapur</p>
+                    </div>
+                    
+                    <div class="edu-card" data-aos="fade-up" data-aos-delay="100">
+                        <span class="edu-year">2018 - 2020</span>
+                        <h3>Intermediate</h3>
+                        <p style="color: var(--text-muted);">Sri Satya Sai Junior College, Anantapur</p>
+                    </div>
+
+                    <div class="edu-card" data-aos="fade-up" data-aos-delay="200">
+                        <span class="edu-year">2018</span>
+                        <h3>SSC</h3>
+                        <p style="color: var(--text-muted);">Sri Sai E.M School, Mudigubba</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ADVANCED FEATURES SECTION -->
+        <section class="section" id="features">
+            <div class="container">
+                <h2 class="section-heading" data-aos="fade-up">Technical Expertise</h2>
+                <p class="section-subtitle" data-aos="fade-up">Core capabilities & advanced implementations</p>
+                
+                 <div class="features-grid" data-aos="fade-up">
+                    <div class="feature-item"><i class="uil uil-cloud"></i> REST APIs</div>
+                    <div class="feature-item"><i class="uil uil-lock"></i> JWT Auth</div>
+                    
+                    <div class="feature-item"><i class="uil uil-database"></i> Python Development</div>
+                    <div class="feature-item"><i class="uil uil-database"></i> Authentication & Authorization</div>
+                    <div class="feature-item"><i class="uil uil-database"></i> Role-Based Access Control</div>
+                    <div class="feature-item"><i class="uil uil-cloud"></i> External API integration</div>
+                    <div class="feature-item"><i class="uil uil-sort-amount-up"></i> Pagination</div>
+                    <div class="feature-item"><i class="uil uil-book-open"></i> API Documentation</div>
+                    <div class="feature-item"><i class="uil uil-database"></i> Responsive Web Design</div>
+                    <div class="feature-item"><i class="uil uil-database"></i> API Consumption using Axios/Fetch</div>
+                    <div class="feature-item"><i class="uil uil-database"></i> Form Handling & Validation</div>
+                    <div class="feature-item"><i class="uil uil-database"></i> Database Indexing</div>
+                    <div class="feature-item"><i class="uil uil-database"></i> Database Optimization</div>
+                    <div class="feature-item"><i class="uil uil-upload-alt"></i> File Uploads</div>
+                    <div class="feature-item"><i class="uil uil-download-alt"></i> Middleware Handling</div>
+                    <div class="feature-item"><i class="uil uil-file-alt"></i> PDF Reports</div>
+                    <div class="feature-item"><i class="uil uil-rocket"></i> Async APIs</div>
+                    <div class="feature-item"><i class="uil uil-clock"></i> Background Tasks</div>
+                    <div class="feature-item"><i class="uil uil-fast-forward"></i> Caching (Redis)</div>
+                    <div class="feature-item"><i class="uil uil-signal"></i> Rate Limiting</div>
+                    <div class="feature-item"><i class="uil uil-wrap-text"></i> Microservices Basics</div>
+                    <div class="feature-item"><i class="uil uil-database"></i> Database Normalization</div>
+                    <div class="feature-item"><i class="uil uil-transaction"></i> ACID Transactions</div>
+                    <div class="feature-item"><i class="uil uil-brackets-curly"></i> Middleware</div>
+                    
+                    <div class="feature-item"><i class="uil uil-robot"></i> Redis</div>
+                    <div class="feature-item"><i class="uil uil-code-branch"></i> CRUD Operations</div>
+                    <div class="feature-item"><i class="uil uil-analysis"></i> Query Optimization</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section class="section" id="contact">
+            <div class="container">
+                <h2 class="section-heading" data-aos="fade-up">Get In Touch</h2>
+                <p class="section-subtitle" data-aos="fade-up">Let's build something amazing together</p>
+                
+                <div class="contact-wrapper" data-aos="zoom-in">
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <input type="text" id="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn primary-btn" style="width: 100%;">Send Message <i class="uil uil-message"></i></button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
         <footer>
-            <div class="footer-container">
-                <div class="footer-left">
-                    <h2>Valasa Om Prasad Reddy</h2>
-                    <ul class="footer-menu">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#skills">Skills</a></li>
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#education">Education</a></li>
-                        <li><a href="#experience">Experience</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
+            <div class="container">
+                <h2 style="color: #fff; margin-bottom: 20px;">Valasa Om Prasad Reddy</h2>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
                 </div>
-                <div class="footer-right">
-                    <h3>Connect with Me</h3>
-                    <div class="footer-social-icons">
-                        <a href="https://www.linkedin.com/in/prasad-unique" class="icon" target="_blank">
-                            <i class="uil uil-linkedin-alt"></i>
-                        </a>
-                        <a href="mailto:valasaomprasadreddy0@gmail.com" class="icon">
-                            <i class="uil uil-envelope"></i>
-                        </a>
-                        <a href="https://www.hackerrank.com/profile/valasaomprasadr2" target="_blank" class="icon">
-                            <i class="uil uil-dribbble"></i>
-                        </a>
-                        <a href="https://github.com/prasadreddy9916" class="icon" target="_blank">
-                            <i class="uil uil-github-alt"></i>
-                        </a>
-                    </div>
+                <div class="social-links" style="justify-content: center; margin-bottom: 20px;">
+                    <a href="https://www.linkedin.com/in/prasad-unique" class="social-icon"><i class="uil uil-linkedin"></i></a>
+                    <a href="https://github.com/prasadreddy9916" class="social-icon"><i class="uil uil-github"></i></a>
+                    <a href="mailto:omprasadreddyvalasa@gmail.com" class="social-icon"><i class="uil uil-envelope"></i></a>
                 </div>
-            </div>
-            <div class="footer-divider"></div>
-            <div class="bottom-footer">
-                <p>© <a href="#home">Prasad</a> - All rights reserved</p>
+                <p style="color: var(--text-muted);">© 2026 Valasa Om Prasad Reddy. All rights reserved.</p>
             </div>
         </footer>
-
-        <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-        <script src="animation.js"></script>
-
-    
-<script>
-    document.getElementById("contactForm").addEventListener("submit", function(event) {
-        event.preventDefault(); // Prevent page reload
-
-        let subject = document.getElementById("subject").value;
-        let userMessage = document.getElementById("message").value;
-
-        // Encode message to handle spaces and special characters
-        let encodedMessage = encodeURIComponent(userMessage);
-        let encodedSubject = encodeURIComponent(subject);
-
-        // Mailto link with pre-filled details
-        let mailtoLink = `mailto:valasaomprasadreddy0@gmail.com?subject=${encodedSubject}&body=${encodedMessage}`;
-
-        // Open default email client
-        window.location.href = mailtoLink;
-    });
-</script>
-
-
-
-        
     </div>
-</body>
 
+    <!-- JAVASCRIPT LOGIC -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // --- 1. Initialize AOS Animation ---
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            offset: 100
+        });
+
+        // --- 2. Loader Logic ---
+        function startLoader() {
+            const content = document.getElementById('content');
+            const loader = document.getElementById('loader');
+            const firstText = document.getElementById('firstText');
+            const fullName = document.getElementById('fullName');
+            
+            setTimeout(() => {
+                firstText.style.display = 'none';
+                fullName.style.display = 'block';
+                fullName.innerText = "Valasa Om Prasad Reddy";
+            }, 1200);
+
+            setTimeout(() => {
+                loader.style.display = 'none';
+                content.style.display = 'block';
+                initTypeWriter();
+                startSlideshow(); // Start image slideshow
+            }, 2500);
+        }
+
+        // --- 3. Typewriter Effect (Violet Color & Blinking Cursor) ---
+        function initTypeWriter() {
+            const texts = ["Python Full Stack Developer", "Backend Expert", "Cloud Enthusiast"];
+            let count = 0;
+            let index = 0;
+            let currentText = "";
+            let letter = "";
+            let isDeleting = false;
+            
+            (function type() {
+                if (count === texts.length) { count = 0; }
+                currentText = texts[count];
+                
+                if (isDeleting) {
+                    letter = currentText.slice(0, --index);
+                } else {
+                    letter = currentText.slice(0, ++index);
+                }
+                
+                const typeEl = document.querySelector('.typedText');
+                if(typeEl) {
+                    typeEl.textContent = letter;
+                    typeEl.style.color = "#8b5cf6"; // Violet Color
+                    typeEl.style.borderRight = "3px solid #8b5cf6"; // Violet Cursor
+                    
+                    let typeSpeed = 100;
+                    if (isDeleting) typeSpeed /= 2;
+                    
+                    if (!isDeleting && letter.length === currentText.length) {
+                        typeSpeed = 2000; // Pause at end
+                        isDeleting = true;
+                    } else if (isDeleting && letter.length === 0) {
+                        isDeleting = false;
+                        count++;
+                        typeSpeed = 500;
+                    }
+                    
+                    setTimeout(type, typeSpeed);
+                }
+            })();
+        }
+
+        // --- 4. Image Slideshow (3 photos, 3 sec each) ---
+        function startSlideshow() {
+            const slides = document.querySelectorAll('.slide-img');
+            let currentSlide = 0;
+            
+            setInterval(() => {
+                slides[currentSlide].classList.remove('active');
+                currentSlide = (currentSlide + 1) % slides.length;
+                slides[currentSlide].classList.add('active');
+            }, 3000);
+        }
+
+        // --- 5. Mobile Menu Toggle ---
+        const navToggle = document.getElementById('navToggle');
+        const navMenuList = document.querySelector('.nav_menu_list');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        navToggle.addEventListener('click', () => {
+            navMenuList.classList.toggle('active');
+        });
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navMenuList.classList.remove('active');
+            });
+        });
+
+        // --- 6. Active Link on Scroll ---
+        const sections = document.querySelectorAll('section');
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= (sectionTop - sectionHeight / 3)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active-link');
+                if (link.getAttribute('href').includes(current)) {
+                    link.classList.add('active-link');
+                }
+            });
+        });
+
+        // --- 7. Contact Form Mailto ---
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const subject = document.getElementById("subject").value;
+            const message = document.getElementById("message").value;
+
+            const encodedSubject = encodeURIComponent(subject);
+            const encodedBody = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
+
+            // Open email client
+            window.location.href = `mailto:omprasadreddyvalasa@gmail.com?subject=${encodedSubject}&body=${encodedBody}`;
+            
+            // Optional: Clear form
+            this.reset();
+            alert("Opening your email client...");
+        });
+    </script>
+</body>
 </html>
