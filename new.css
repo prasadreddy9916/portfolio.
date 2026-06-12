@@ -382,7 +382,60 @@ img {
 .slide-img.active {
     opacity: 1;
 }
+/* --- QUICK INFO SECTION (NEW) --- */
+.quick-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
 
+.info-card {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    padding: 25px;
+    border-radius: 15px;
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    transition: var(--transition);
+}
+
+.info-card:hover {
+    border-color: var(--primary);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.info-icon {
+    font-size: 1.5rem;
+    color: var(--accent);
+    background: rgba(139, 92, 246, 0.1);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    flex-shrink: 0;
+}
+
+.info-content h4 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: var(--text-main);
+}
+
+.info-content p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 5px;
+    line-height: 1.4;
+}
+
+.info-content strong {
+    color: var(--primary);
+}
 /* --- ABOUT SECTION --- */
 .section {
     padding: 100px 0;
