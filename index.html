@@ -25,10 +25,20 @@
 </head>
 
 <body onload="startLoader()">
-    <div id="loader">
-        <h1 id="firstText" class="loader-text">Portfolio</h1>
-        <h1 id="fullName" class="loader-text" style="display: none;"></h1>
+   <div id="loader">
+    <!-- First Text: Stays Normal -->
+    <h1 id="firstText" class="loader-text">Portfolio</h1>
+    
+    <!-- New Animation: PRASAD letters -->
+    <div class="name-reveal" id="animatedName">
+        <span class="letter">P</span>
+        <span class="letter">R</span>
+        <span class="letter">A</span>
+        <span class="letter">S</span>
+        <span class="letter">A</span>
+        <span class="letter">D</span>
     </div>
+</div>
     
     <div id="content" style="display: none;">
         <!-- NAVIGATION (Logo on Right) -->
@@ -621,25 +631,33 @@
             offset: 100
         });
 
-        // --- 2. Loader Logic ---
+               // --- 2. Updated Loader Logic ---
         function startLoader() {
             const content = document.getElementById('content');
             const loader = document.getElementById('loader');
-            const firstText = document.getElementById('firstText');
-            const fullName = document.getElementById('fullName');
+            const letters = document.querySelectorAll('.letter');
             
-            setTimeout(() => {
-                firstText.style.display = 'none';
-                fullName.style.display = 'block';
-                fullName.innerText = "Valasa Om Prasad Reddy";
-            }, 1200);
+            // 1. Reveal "Portfolio" immediately (it's already in HTML)
+            
+            // 2. Animate "PRASAD" letters one by one
+            letters.forEach((letter, index) => {
+                setTimeout(() => {
+                    letter.classList.add('animate');
+                }, 500 + (index * 150)); // Starts after 500ms, each letter 150ms apart
+            });
 
+            // 3. Hide loader after animation finishes (approx 1.5s total)
             setTimeout(() => {
-                loader.style.display = 'none';
-                content.style.display = 'block';
-                initTypeWriter();
-                startSlideshow(); // Start image slideshow
-            }, 2500);
+                loader.style.opacity = '0';
+                loader.style.transition = 'opacity 0.5s ease';
+                
+                setTimeout(() => {
+                    loader.style.display = 'none';
+                    content.style.display = 'block';
+                    initTypeWriter();
+                    startSlideshow();
+                }, 500); // Wait for fade out
+            }, 2000); // Total display time
         }
 
         // --- 3. Typewriter Effect (Violet Color & Blinking Cursor) ---
