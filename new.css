@@ -122,19 +122,51 @@ img {
     flex-direction: column;
 }
 
+/* First text stays normal */
 .loader-text {
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 800;
-    color: var(--primary);
-    animation: pulse 1.5s infinite;
+    color: var(--text-muted);
+    margin-bottom: 30px;
+    letter-spacing: 2px;
 }
 
-@keyframes pulse {
-    0% { opacity: 0.5; transform: scale(0.9); }
-    50% { opacity: 1; transform: scale(1.1); }
-    100% { opacity: 0.5; transform: scale(0.9); }
+/* --- NEW FLY-IN ANIMATION --- */
+.name-reveal {
+    display: flex;
+    gap: 5px; /* Space between letters */
+    font-size: 4rem; /* Large size */
+    font-weight: 900;
 }
 
+.letter {
+    display: inline-block;
+    color: transparent; /* Text color transparent to show gradient */
+    background: linear-gradient(to right, var(--primary), var(--accent), #fff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    opacity: 0; /* Hidden initially */
+    transform: translateY(50px) rotate(10deg); /* Start position: lower and tilted */
+    text-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+
+/* Class added by JS to trigger animation */
+.letter.animate {
+    animation: flyIn 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+@keyframes flyIn {
+    0% {
+        opacity: 0;
+        transform: translateY(100px) scale(0.5) rotate(-20deg);
+        filter: blur(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1) rotate(0deg);
+        filter: blur(0);
+    }
+}
 /* --- NAVIGATION (Logo Right) --- */
 #header {
     position: fixed;
@@ -591,8 +623,8 @@ img {
     }
 
     .status-card {
-        width: 220px;
-        height: 220px;
+        width: 320px;
+        height: 320px;
     }
 }
 
